@@ -1,0 +1,48 @@
+package week7;
+
+public class student extends Person {
+	// atribut dan method super class
+	protected String nim;
+	public void identity()
+	{
+		System.out.println("Nim: "+nim);
+	}
+   }
+//inherit dari  person
+public class student extends Person {
+	String nim;
+	public Student() {
+		System.out.println("Inside Student:Constructor");
+		super.name="Nama Anda";
+	}
+	// method baru di subclass
+	public String getNim()	
+		return nim;
+	}
+    public String getNama() {
+	System.out.println("Student nama: "+name);
+	return name;
+	
+	@Override
+	public void identity()
+	{
+		System.out.println("NIM: "+getNim());
+		System.out.println("Nama: "+super.name);
+		System.out.println("Alamat: "+super.address);
+	}
+	
+	public void job()
+	{
+		System.out.println("Pekerjaan : Mahasiswa");
+	}
+class InheritMain {
+public static void main(String[] args)	{
+        student mahasiswa = new Student();
+        //pemanggilan method dari SuperClass
+        
+        //pemanggilan method dari subclass
+        mahasiswa.nim = 'A11.2020.13063';
+        mahasiswa.identity();
+        }	
+	}		
+}
